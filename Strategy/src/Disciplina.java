@@ -20,7 +20,7 @@ public class Disciplina {
     }
 
     public void setMedia(double media) {
-        Media = media;
+        this.Media = media;
     }
 
     public String getNome() {
@@ -28,7 +28,7 @@ public class Disciplina {
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.Nome = nome;
     }
 
     public double getP1() {
@@ -36,7 +36,7 @@ public class Disciplina {
     }
 
     public void setP1(double p1) {
-        P1 = p1;
+        this.P1 = p1;
     }
 
     public double getP2() {
@@ -44,7 +44,7 @@ public class Disciplina {
     }
 
     public void setP2(double p2) {
-        P2 = p2;
+        this.P2 = p2;
     }
 
     public String getSitucao() {
@@ -52,12 +52,16 @@ public class Disciplina {
     }
 
     public void setSitucao(String situcao) {
-        Situcao = situcao;
+        this.Situcao = situcao;
     }
 
+    Disciplina(ICalcMedia calcula)
+    {
+        this.CalcMedia = calcula;
+    }
     public void CalcularMedia()
     {
+        Media = CalcMedia.CaculaMedia(P1, P2);
+        Situcao = CalcMedia.Situacao(Media);
     }
-
-
 }

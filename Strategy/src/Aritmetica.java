@@ -1,13 +1,15 @@
-public class Geometrica implements ICalcMedia{
+public class Aritmetica implements ICalcMedia{
+
     @Override
     public double CaculaMedia(double a, double b) {
-        return Math.sqrt(a*b);
+        return (a+b)/2;
     }
 
     @Override
-    public String Situacao(double media) {
+    public String Situacao(double media)
+    {
         String situacao;
-        if(media>=7)
+        if(media>5)
         {
             situacao = "Aprovado";
         }
